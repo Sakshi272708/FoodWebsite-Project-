@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummmmmmm</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addproduct.css">
+
+</head>
+
+<body>
+    <p id="successfully-added">Item added to cart✅</p>
+    <header>
+        <!-- nav section -->
+        <nav class="nav">
+            <span id="username">Welcome, Guest</span>
+            <h1>Foodies</h1>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search food...">
+                    <button class="clear-input hides">X</button>
+                </div>
+
+                <button id="menu-toggle">☰</button>
+            </div>
+            <div class="navbar-link">
+                <ul class="nav-links">
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#menu-section">Menu</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+
+                    <li>
+                        <button id="cart-btn">🛒Cart<span id="cart-count">(0)</span></button>
+                    </li>
+
+                    <li> <button id="manage-orders-btn" style="display:none;">
+                            Manage Orders
+                        </button>
+                    </li>
+                    <li><button id="theme-toggle"> 🌙</button></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- hero section -->
+    <section id="hero-section" class="hero">
+        <h2>Delicious Food Delivered To You</h2>
+        <p>Order your favorite meals anytime</p>
+        <button id="hero-btn">Order Now</button>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu-section">
+        <div class="menu-controls">
+            <h2>Our Menu</h2>
+            <p id="loading-products" class="hidden">
+                Loading products...
+            </p>
+            <div class="menu-btns">
+                <button class="filter-btns active-filter" data-category="all">All</button>
+                <button class="filter-btns active-filter" data-category="veg">Veg</button>
+                <button class="filter-btns active-filter" data-category="non-veg">Non-Veg</button>
+            </div>
+
+            <button id="open-form-btn">+ Add Product</button>
+        </div>
+        <div class="form-overlay">
+            <div class="add-product-form">
+                <button class="close-btn">❌</button>
+                <h3>Add New Product</h3>
+
+                <label for="p-title"> Name:</label>
+                <input type="text" id="p-title" placeholder="Product name">
+
+                <label for="p-price">Price:</label>
+                <input type="number" id="p-price" placeholder="Price">
+
+                <label for="p-description">Description:</label>
+                <textarea id="p-description" placeholder="Description" rows="3"></textarea>
+
+                <label for="p-rating">Rating:</label>
+                <input type="number" id="p-rating" placeholder="Rating" min="0" max="5">
+
+                <label for="p-image"> URL:</label>
+                <input type="file" id="p-image" placeholder="Image URL">
+
+                <label for="p-category">Category:</label>
+                <select id="p-category">
+                    <option value="veg">Veg</option>
+                    <option value="non-veg">Non-Veg</option>
+                </select>
+
+                <label for="p-available">
+                    Available
+                </label>
+                <select id="p-available">
+                    <option value="true">Available</option>
+                    <option value="false">Not Available</option>
+                </select>
+
+                <button id="add-product-btn">Add Product</button>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <!-- items add here by js -->
+        </div>
+    </section>
+
+    <!-- CART SECTION -->
+    <section class="cart hide">
+        <h2 id="cart-title"></h2>
+
+        <div class="cart-items">
+            <p class="empty-msg">Your cart is empty. <br> Add some delicious food</p>
+        </div>
+
+        <h3 id="total-price">Total: ₹0</h3>
+
+        <button id="place-order-btn"> Place Order</button>
+        <button id="my-orders-btn"> My Orders</button>
+
+
+    </section>
+
+    <section id="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Email: food123@gmail.com</p>
+            <p>phone: 1234567890</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>Foodie</h3>
+
+        <div class="footer-links">
+            <a href="#hero-section">Home</a>
+            <a href="#menu-section">Menu</a>
+            <a href="#contact-section">Contact</a>
+        </div>
+        <button id="logout-btn">Logout</button>
+        <p>© 2026 Foodie. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../js/main.js" defer></script>
+    <script type="module" src="../js/addproduct.js" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+
+</html>
