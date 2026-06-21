@@ -6,7 +6,7 @@ import { fetchCartItems } from "./cart.js";
 export async function showOrders() {
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:3000/my-orders", {
+    const response = await fetch("http://foodwebsite-project.onrender.com/my-orders", {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -100,7 +100,7 @@ export async function showOrders() {
             console.log("Type:", typeof amount);
 
             const response = await fetch(
-                "http://localhost:3000/create-payment-order",
+                "http://foodwebsite-project.onrender.com/create-payment-order",
                 {
                     method: "POST",
                     headers: {
@@ -132,7 +132,7 @@ export async function showOrders() {
                     const token = localStorage.getItem("token");
 
                     const verifyResponse = await fetch(
-                        "http://localhost:3000/verify-payment",
+                        "http://foodwebsite-project.onrender.com/verify-payment",
                         {
                             method: "POST",
                             headers: {
@@ -183,7 +183,7 @@ export async function showOrders() {
             try {
 
                 const response = await fetch(
-                    `http://localhost:3000/cancel-order/${orderId}`,
+                    `http://foodwebsite-project.onrender.com/cancel-order/${orderId}`,
                     {
                         method: "DELETE",
                         headers: {
@@ -223,7 +223,7 @@ export async function placeOrder() {
             placeOrderBtn.textContent = "Placing Order..."; // Show loading state
             placeOrderBtn.disabled = true; // Disable button to prevent multiple clicks
 
-            const response = await fetch("http://localhost:3000/place-order", {
+            const response = await fetch("http://foodwebsite-project.onrender.com/place-order", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -253,7 +253,7 @@ export async function showAllOrders() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-        "http://localhost:3000/all-orders",
+        "http://foodwebsite-project.onrender.com/all-orders",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -323,7 +323,7 @@ export async function showAllOrders() {
 
             try {
                 const response = await fetch(
-                    `http://localhost:3000/update-order-status/${orderId}`,
+                    `http://foodwebsite-project.onrender.com/update-order-status/${orderId}`,
                     {
                         method: "PATCH",
                         headers: {

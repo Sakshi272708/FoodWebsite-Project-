@@ -130,7 +130,7 @@ export function setupCart() {
         if (e.target.classList.contains("plusBtn")) {
             e.target.disabled = true;
             try {
-                const response = await fetch(`http://localhost:3000/add-quantity/${item._id}`, {
+                const response = await fetch(`http://foodwebsite-project.onrender.com/add-quantity/${item._id}`, {
                     method: "PATCH",
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -157,7 +157,7 @@ export function setupCart() {
         if (e.target.classList.contains("minusBtn")) {
             e.target.disabled = true;
             try {
-                const response = await fetch(`http://localhost:3000/decrease-quantity/${item._id}`, {
+                const response = await fetch(`http://foodwebsite-project.onrender.com/decrease-quantity/${item._id}`, {
                     method: "PATCH",
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -190,7 +190,7 @@ export function setupCart() {
 
             try {
                 const response = await fetch(
-                    `http://localhost:3000/deletecart-item/${item._id}`,
+                    `http://foodwebsite-project.onrender.com/deletecart-item/${item._id}`,
                     {
                         method: "DELETE",
                         headers: {
@@ -229,7 +229,7 @@ async function fetchCartItems() {
 
         const token = localStorage.getItem("token");
         const response = await fetch(
-            "http://localhost:3000/all-cartItem",
+            "http://foodwebsite-project.onrender.com/all-cartItem",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

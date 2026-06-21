@@ -15,7 +15,7 @@ loginForm.addEventListener("submit", async (e) => {
     loginBtn.disabled = true;
     loginBtn.textContent = "Logging in...";
     try {
-        const response = await fetch("http://localhost:3000/login", {
+        const response = await fetch("http://foodwebsite-project.onrender.com/login", {
             method: "POST",
 
             headers: {
