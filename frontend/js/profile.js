@@ -8,7 +8,7 @@ export async function loadProfile() {
     if (!token) return;
 
     try {
-        const response = await fetch("http://foodwebsite-project.onrender.com/profile", {
+        const response = await fetch("https://foodwebsite-project.onrender.com/profile", {
             headers: {
                 Authorization: `Bearer ${token}`
             }

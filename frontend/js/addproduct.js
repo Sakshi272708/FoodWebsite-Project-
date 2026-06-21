@@ -123,7 +123,7 @@ addProductBtn.addEventListener("click", async (e) => {
         if (state.editingId) {
             console.log("EDITING ID:", state.editingId);
             const token = localStorage.getItem("token");
-            const response = await fetch(`http://localhost:3000/update-food/${state.editingId}`, {
+            const response = await fetch(`https://foodwebsite-project.onrender.com/update-food/${state.editingId}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -139,7 +139,7 @@ addProductBtn.addEventListener("click", async (e) => {
         }
         else {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:3000/add-food", {
+            const response = await fetch("https://localhost:3000/add-food", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`

@@ -18,7 +18,7 @@ signupForm.addEventListener('submit', async (e) => {
     signupBtn.textContent = "Registering...";
     signupmsg.textContent = "";
     try {
-        const response = await fetch("http://foodwebsite-project.onrender.com/register", {
+        const response = await fetch("https://foodwebsite-project.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -1,4 +1,4 @@
-const BASE_URL = "http://foodwebsite-project.onrender.com";
+const BASE_URL = "https://foodwebsite-project.onrender.com";
 
 export async function apiRequest(endpoint, options = {}) {
 

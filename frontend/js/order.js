@@ -100,7 +100,7 @@ export async function showOrders() {
             console.log("Type:", typeof amount);
 
             const response = await fetch(
-                "http://foodwebsite-project.onrender.com/create-payment-order",
+                "https://foodwebsite-project.onrender.com/create-payment-order",
                 {
                     method: "POST",
                     headers: {
@@ -132,7 +132,7 @@ export async function showOrders() {
                     const token = localStorage.getItem("token");
 
                     const verifyResponse = await fetch(
-                        "http://foodwebsite-project.onrender.com/verify-payment",
+                        "https://foodwebsite-project.onrender.com/verify-payment",
                         {
                             method: "POST",
                             headers: {
@@ -183,7 +183,7 @@ export async function showOrders() {
             try {
 
                 const response = await fetch(
-                    `http://foodwebsite-project.onrender.com/cancel-order/${orderId}`,
+                    `https://foodwebsite-project.onrender.com/cancel-order/${orderId}`,
                     {
                         method: "DELETE",
                         headers: {
@@ -253,7 +253,7 @@ export async function showAllOrders() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-        "http://foodwebsite-project.onrender.com/all-orders",
+        "https://foodwebsite-project.onrender.com/all-orders",
         {
             headers: {
                 Authorization: `Bearer ${token}`
