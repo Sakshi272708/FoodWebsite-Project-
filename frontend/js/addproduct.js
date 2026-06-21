@@ -139,7 +139,7 @@ addProductBtn.addEventListener("click", async (e) => {
         }
         else {
             const token = localStorage.getItem("token");
-            const response = await fetch("https://localhost:3000/add-food", {
+            const response = await fetch("https://foodwebsite-project.onrender.com/add-food", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`
