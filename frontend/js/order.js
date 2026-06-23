@@ -100,7 +100,7 @@ export async function showOrders() {
             console.log("Type:", typeof amount);
 
             const response = await fetch(
-                "https://foodwebsite-project.onrender.com/create-payment-order",
+                "httpss://foodwebsite-project.onrender.com/create-payment-order",
                 {
                     method: "POST",
                     headers: {
