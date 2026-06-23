@@ -6,7 +6,7 @@ import { fetchCartItems } from "./cart.js";
 export async function showOrders() {
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://foodwebsite-project.onrender.com/my-orders", {
+    const response = await fetch("https://foodwebsite-project.onrender.com/my-orders", {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -323,7 +323,7 @@ export async function showAllOrders() {
 
             try {
                 const response = await fetch(
-                    `http://foodwebsite-project.onrender.com/update-order-status/${orderId}`,
+                    `https://foodwebsite-project.onrender.com/update-order-status/${orderId}`,
                     {
                         method: "PATCH",
                         headers: {
