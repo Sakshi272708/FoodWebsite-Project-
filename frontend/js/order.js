@@ -223,7 +223,7 @@ export async function placeOrder() {
             placeOrderBtn.textContent = "Placing Order..."; // Show loading state
             placeOrderBtn.disabled = true; // Disable button to prevent multiple clicks
 
-            const response = await fetch("http://foodwebsite-project.onrender.com/place-order", {
+            const response = await fetch("https://foodwebsite-project.onrender.com/place-order", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
