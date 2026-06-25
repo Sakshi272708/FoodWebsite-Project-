@@ -94,13 +94,13 @@ export async function showOrders() {
         btn.addEventListener("click", async () => {
 
             const token = localStorage.getItem("token");
-
+"httpss://foodwebsite-project.onrender.com/create-payment-order"
             const amount = Number(btn.dataset.amount);
             console.log("Amount:", amount);
             console.log("Type:", typeof amount);
 
             const response = await fetch(
-                "httpss://foodwebsite-project.onrender.com/create-payment-order",
+                "https://foodwebsite-project.onrender.com/create-payment-order",
                 {
                     method: "POST",
                     headers: {
@@ -332,7 +332,7 @@ export async function showAllOrders() {
                         },
                         body: JSON.stringify({
                             status: newStatus
-                        })
+                        })  
                     }
                 );
 
